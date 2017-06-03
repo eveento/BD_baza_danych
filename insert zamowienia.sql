@@ -1,0 +1,2 @@
+INSERT INTO `restauracja`.`zamowienia` (`ID_zamowienia`, `Zlozono`, `Wydano`, `Czy_reklamacja`, `Razem`, `Klienci_ID_klienta`, `Pracownicy_ID_pracownika`) VALUES ('1', '2017-06-03 12:10:07', '2017-06-03 12:10:07', '0', '10', '1', '101');
+INSERT INTO `restauracja`.`zamowienia` (`ID_zamowienia`, `Zlozono`, `Wydano`, `Czy_reklamacja`, `Razem`, `Klienci_ID_klienta`, `Pracownicy_ID_pracownika`) VALUES ('2', '2017-06-03 12:10:07', '2017-06-03 12:10:07', '0', '5', '1', '202');

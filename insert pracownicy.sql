@@ -1,0 +1,9 @@
+INSERT INTO `restauracja`.`pracownicy` (`ID_pracownika`, `Imie`, `Nazwisko`, `Stanowisko`, `Zatrudniono`) VALUES ('101', 'Ozajasz', 'Oldberg', 'Kierownik', '2017-06-03');
+INSERT INTO `restauracja`.`pracownicy` (`ID_pracownika`, `Imie`, `Nazwisko`, `Stanowisko`, `Zatrudniono`) VALUES ('102', 'Azajasz', 'Aldberg', 'Kierownik', '2017-06-03');
+INSERT INTO `restauracja`.`pracownicy` (`ID_pracownika`, `Imie`, `Nazwisko`, `Stanowisko`, `Zatrudniono`) VALUES ('201', 'Michau', 'Miau', 'Obsługa', '2017-06-03');
+INSERT INTO `restauracja`.`pracownicy` (`ID_pracownika`, `Imie`, `Nazwisko`, `Stanowisko`, `Zatrudniono`) VALUES ('202', 'Kichau', 'Kiau', 'Obsługa', '2017-06-03');
+INSERT INTO `restauracja`.`pracownicy` (`ID_pracownika`, `Imie`, `Nazwisko`, `Stanowisko`, `Zatrudniono`) VALUES ('203', 'Bichau', 'Biau', 'Obsługa', '2017-06-03');
+INSERT INTO `restauracja`.`pracownicy` (`ID_pracownika`, `Imie`, `Nazwisko`, `Stanowisko`, `Zatrudniono`) VALUES ('204', 'Pichau', 'Piau', 'Obsługa', '2017-06-03');
+INSERT INTO `restauracja`.`pracownicy` (`ID_pracownika`, `Imie`, `Nazwisko`, `Stanowisko`, `Zatrudniono`) VALUES ('301', 'Dindu', 'Duff', 'Cieć', '2017-06-03');
+INSERT INTO `restauracja`.`pracownicy` (`ID_pracownika`, `Imie`, `Nazwisko`, `Stanowisko`, `Zatrudniono`) VALUES ('302', 'Bindu', 'Buff', 'Cieć', '2017-06-03');
+INSERT INTO `restauracja`.`pracownicy` (`ID_pracownika`, `Imie`, `Nazwisko`, `Stanowisko`, `Zatrudniono`) VALUES ('303', 'Kindu', 'Kuff', 'Cieć', '2017-06-03');

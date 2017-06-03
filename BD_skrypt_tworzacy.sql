@@ -15,6 +15,15 @@ CREATE SCHEMA IF NOT EXISTS `restauracja` DEFAULT CHARACTER SET utf8 ;
 USE `restauracja` ;
 
 -- -----------------------------------------------------
+-- Table `restauracja`.`Klienci`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `restauracja`.`Klienci` (
+  `ID_klienta` INT NOT NULL,
+  PRIMARY KEY (`ID_klienta`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
 -- Table `restauracja`.`Pracownicy`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `restauracja`.`Pracownicy` (
@@ -28,38 +37,27 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `restauracja`.`Klienci`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `restauracja`.`Klienci` (
-  `ID_klienta` INT NOT NULL,
-  PRIMARY KEY (`ID_klienta`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
 -- Table `restauracja`.`Zamowienia`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `restauracja`.`Zamowienia` (
   `ID_zamowienia` INT NOT NULL AUTO_INCREMENT,
-  `Klienci_ID_klienta` INT NOT NULL,
-  `Pracownicy_ID_pracownika` INT NOT NULL,
   `Zlozono` DATETIME(0) NULL,
   `Wydano` DATETIME(0) NULL,
   `Czy_reklamacja` TINYINT NULL,
   `Razem` FLOAT NULL,
-  `Pracownicy_ID_pracownika1` INT NOT NULL,
-  `Klienci_ID_klienta1` INT NOT NULL,
-  PRIMARY KEY (`ID_zamowienia`, `Klienci_ID_klienta`, `Pracownicy_ID_pracownika`, `Pracownicy_ID_pracownika1`, `Klienci_ID_klienta1`),
-  INDEX `fk_Zamowienia_Pracownicy1_idx` (`Pracownicy_ID_pracownika1` ASC),
-  INDEX `fk_Zamowienia_Klienci1_idx` (`Klienci_ID_klienta1` ASC),
-  CONSTRAINT `fk_Zamowienia_Pracownicy1`
-    FOREIGN KEY (`Pracownicy_ID_pracownika1`)
-    REFERENCES `restauracja`.`Pracownicy` (`ID_pracownika`)
+  `Klienci_ID_klienta` INT NOT NULL,
+  `Pracownicy_ID_pracownika` INT NOT NULL,
+  PRIMARY KEY (`ID_zamowienia`, `Klienci_ID_klienta`, `Pracownicy_ID_pracownika`),
+  INDEX `fk_Zamowienia_Klienci1_idx` (`Klienci_ID_klienta` ASC),
+  INDEX `fk_Zamowienia_Pracownicy1_idx` (`Pracownicy_ID_pracownika` ASC),
+  CONSTRAINT `fk_Zamowienia_Klienci1`
+    FOREIGN KEY (`Klienci_ID_klienta`)
+    REFERENCES `restauracja`.`Klienci` (`ID_klienta`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Zamowienia_Klienci1`
-    FOREIGN KEY (`Klienci_ID_klienta1`)
-    REFERENCES `restauracja`.`Klienci` (`ID_klienta`)
+  CONSTRAINT `fk_Zamowienia_Pracownicy1`
+    FOREIGN KEY (`Pracownicy_ID_pracownika`)
+    REFERENCES `restauracja`.`Pracownicy` (`ID_pracownika`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
