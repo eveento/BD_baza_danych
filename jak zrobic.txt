@@ -1,0 +1,11 @@
+na początek panel - panel zasłąnia ekran główny aplikacji, potem się robi "przeźroczysty"
+... z przyciskiem "złóż zamówienie" albo "rozpocznij", coś tego typu
+przycisk ten robi inserta początkowego z numerem zamówienia i losowymi innymi rekordami
+
+klient wybierając dania robi update, 
+usuwając dania z zamówienia robi delete
+
+jest jeszcze przycisk "złóż zamówienie"
+wtedy pokazuje się panel z komunikatem "złożono" i przyciskiem "OK"
+
+wróć do kroku 1 ^
